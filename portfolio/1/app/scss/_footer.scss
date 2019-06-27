@@ -1,0 +1,99 @@
+footer {
+  background: $darkBlueFoot;
+
+  section {
+    display: grid;
+    grid-gap: 1em;
+    grid-template:
+      "logo logo logo logo logo" auto
+      ". location contact nav social" auto /
+      2rem 2fr 3fr 2.5fr 1.5fr;
+    padding: 6em 5em 2em 5em;
+    margin: auto;
+    font-size: 0.95em;
+    color: $white;
+    max-width: 1200px;
+  }
+
+  a,
+  a:active,
+  a:visited {
+    color: $white;
+    border: none;
+  }
+  a:hover {
+    color: $cyan;
+  }
+
+  .location::before,
+  .phone::before,
+  .email::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: -20%;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .location {
+    grid-area: location;
+    position: relative;
+    padding-right: 3em;
+
+    &::before {
+      content: "\f3c5";
+    }
+  }
+
+  .contact {
+    grid-area: contact;
+    position: relative;
+    margin-left: 2.5em;
+
+    .phone::before {
+      content: "\f095";
+    }
+    .email::before {
+      content: "\f0e0";
+    }
+  }
+
+  .footer-nav {
+    grid-area: nav;
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    li {
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  .social {
+    grid-area: social;
+    text-align: center;
+    display: flex;
+    gap: 10%;
+    margin-top: 5px;
+
+    i {
+      width: 30px;
+      height: 30px;
+      font-size: 1em;
+      padding-top: 6px;
+      border: 1px $white solid;
+      border-radius: 50%;
+      display: inline-block;
+
+      &:hover {
+        border: 1px solid $cyan;
+      }
+    }
+  }
+}

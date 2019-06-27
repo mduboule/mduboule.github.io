@@ -1,0 +1,149 @@
+section.main {
+  background: $darkBlueMain;
+  position: relative;
+
+  .features {
+    margin: auto;
+    padding: 0 2rem;
+    text-align: center;
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(2, 360px);
+    justify-content: space-evenly;
+    grid-gap: 25px;
+    align-items: end;
+  }
+
+  .slide {
+    display: flex;
+    margin-top: 90px;
+    margin: 4rem 2rem;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: auto;
+      height: auto;
+    }
+
+    > * {
+      flex: 1;
+      max-width: 615px;
+      max-height: 465px;
+    }
+  }
+
+  .testimonials {
+    display: flex;
+    justify-content: space-around;
+    margin: 14em 3em;
+    font-size: 0.9em;
+    position: relative;
+
+    &::before {
+      background-image: url(../dist/img/bg-quotes.png);
+      position: absolute;
+      display: block;
+      top: -2.5em;
+      left: 0.5em;
+      content: "";
+      width: 55px;
+      height: 45px;
+    }
+
+    .testimonial {
+      background-color: $darkBlueTest;
+      padding: 2.7em 2em 1em 2em;
+      width: 30%;
+      line-height: 1.5em;
+      position: relative;
+      z-index: 10;
+
+      p:first-child {
+        margin-bottom: 1.4rem;
+      }
+      img {
+        position: float;
+        float: left;
+        width: 1.8em;
+        border-radius: 50%;
+        margin-right: 0.5em;
+      }
+      h4 {
+        color: $white;
+        font-size: 0.8em;
+        margin: 0;
+      }
+      .profileTitle {
+        margin: 0;
+        padding: 0;
+        font-size: 0.4em;
+        text-transform: uppercase;
+        position: relative;
+        bottom: 9px;
+      }
+    }
+  }
+
+  .sign-up {
+    background: linear-gradient(
+      to bottom,
+      $darkBlueMain 0%,
+      $darkBlueMain 50%,
+      $darkBlueFoot 51%,
+      $darkBlueFoot 100%
+    );
+  }
+
+  .sign-up-frame {
+    max-width: 860px;
+    margin: auto;
+    text-align: center;
+    padding: 1em 3em;
+    border-radius: 10px;
+    background: $darkBlueFeat;
+    z-index: 2;
+    position: relative;
+    box-shadow: 4px 4px 5px #090909;
+
+    h3 {
+      font-size: 2em;
+      font-family: Raleway;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 0.9em;
+      padding: 0 5%;
+    }
+
+    form {
+      display: flex;
+      padding: 0 8%;
+
+      input {
+        padding: 1.5em;
+        margin: 2em 0.5em;
+        border-radius: 30px;
+        border: none;
+
+        &:first-child {
+          flex: 1;
+          color: #888888;
+          padding-left: 5%;
+        }
+
+        &[type="submit"] {
+          background-color: $cyan;
+          color: $white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

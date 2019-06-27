@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: $darkBlueFeat;
+  font-family: Raleway;
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-family: "Open Sans";
+  line-height: 4rem;
+  color: $white;
+}
+
+h3 {
+  color: $white;
+  font-family: "Open Sans";
+}
+
+p {
+  color: $white;
+  font-family: Raleway;
+}
+
+a {
+  color: $cyan;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $cyan;
+}
+a:active {
+  color: $cyan;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $cyan;
+}
+a:hover {
+  color: $blue;
+  text-decoration: none;
+  border-bottom: none;
+}
+a:visited {
+  color: $cyan;
+  text-decoration: none;
+  border-bottom: 1px solid $cyan;
+  padding-bottom: 12px;
+}
+.external-link::after {
+  content: url(../dist/img/icon-arrow.svg);
+  position: relative;
+  left: 5px;
+  top: 3px;
+}
+
+button {
+  padding: 20px 95px 20px 95px;
+  background-color: $cyan;
+  color: $white;
+  border-radius: 50px;
+  border: none;
+  font-family: Raleway;
+  font-size: 1rem;
+  margin: auto;
+
+  &:hover {
+    background: $blue;
+    cursor: pointer;
+  }
+}
+
+a img {
+  text-decoration: underline;
+}

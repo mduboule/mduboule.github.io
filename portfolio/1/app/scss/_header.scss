@@ -1,0 +1,50 @@
+.wrapper {
+  header {
+    margin: 80px 80px;
+    display: grid;
+    grid-template:
+      "logo nav" auto/
+      auto 1fr;
+    justify-content: space-between;
+
+    .logo {
+      width: 176px;
+      height: 52px;
+      background-size: 176px 52px;
+      background-image: url(../dist/img/logo.svg);
+      grid-area: logo;
+    }
+
+    .toggle {
+      grid-area: nav;
+      justify-self: right;
+      color: white;
+      font-size: 2rem;
+      display: none;
+    }
+
+    .toggle-menu {
+      display: none;
+      justify-self: right;
+      align-self: top;
+    }
+
+    nav {
+      grid-area: nav;
+      justify-self: right;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        border: none;
+        font-family: Raleway;
+        margin-left: 55px;
+        font-size: 0.8rem;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+  }
+}
