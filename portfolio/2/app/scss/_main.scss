@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template:
+    "hero header" auto
+    "hero main" auto
+    "hero footer" auto/
+    50% 50%;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $darkBlue;
+  font-family: "Open Sans";
+}
+
+h2 {
+  margin-top: 2em;
+  font-size: 1.8rem;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  width: 90%;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 0;
+  margin-top: 3rem;
+}
+
+p,
+a,
+input {
+  font-family: "Open Sans", sans-serif;
+  color: $gray;
+  line-height: 1.3rem;
+}
+
+a,
+a:visited,
+a:focus {
+  color: $darkBlue;
+}
+
+a:hover {
+  color: $softBlue;
+}
+
+body > div {
+  flex: 1;
+}
+
+.hero {
+  grid-area: hero;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  background-image: linear-gradient(to bottom left, #000066, #666699);
+
+  img {
+    width: 75%;
+  }
+}
+
+.page-header {
+  grid-area: header;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 9%;
+  padding-bottom: 0;
+
+  .logo {
+    display: block;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  /* White logo for mobile version only */
+  .logo-white {
+    display: none;
+  }
+
+  .social a i::before {
+    font-size: 1.3rem;
+    padding-left: 1.25em;
+  }
+
+  .social a,
+  .social a:visited,
+  .social a:focus {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .social a:hover {
+    color: $darkBlue;
+  }
+}
+
+main {
+  grid-area: main;
+  margin: 0 9%;
+
+  p {
+    width: 70%;
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    input {
+      flex: 1;
+      border: none;
+      border-radius: 4px;
+      padding: .8em;
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, .2);
+
+      &[type="email"] {
+        flex-basis: 40%;
+        min-width: 300px;
+        margin: 0 1em 1em 0;
+      }
+
+      &[type="submit"] {
+        color: white;
+        background: $green;
+        cursor: pointer;
+        flex: 0 140px;
+      }
+      &[type="submit"]:hover {
+        background: $lightGreen;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 0 9% 9% 9%;
+  font-size: 0.7rem;
+  text-align: right;
+  align-self: end;
+}
