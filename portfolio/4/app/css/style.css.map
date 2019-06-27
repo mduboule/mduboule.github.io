@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"style.css","sourcesContent":[]}
+{"version":3,"sources":["_fonts.scss"],"names":[],"mappings":"AAAA,iFAAY","file":"style.css","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');\n$font: 'Rubik', sans-serif;"]}

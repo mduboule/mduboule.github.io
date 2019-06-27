@@ -1,2 +1,13 @@
-// Neutral colors
-$white: hsl(0, 0%, 100%);
+:root {
+    // Primariy colors
+    // --prim-soft-blue: hsl(231, 69%, 60%);
+    // --prim-soft-red: hsl(0, 94%, 66%);
+    $prim-blue: hsl(231, 69%, 60%);
+    $prim-red: hsl(0, 94%, 66%);
+
+    // Neutral
+    // --neutral-gray-blue: hsl(229, 8%, 60%);
+    // --neutral-dark-blue: hsl(229, 31%, 21%);
+    $neutral-gray: hsl(229, 8%, 60%);
+    $neutral-blue: hsl(229, 31%, 21%);
+  }
