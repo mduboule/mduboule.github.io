@@ -1,0 +1,82 @@
+@media only screen and (max-width: 800px) {
+  section header {
+    margin-top: 4rem;
+  }
+
+  .snippet {
+    grid-template:
+      "header" auto
+      "img" auto
+      "features" auto/
+      100%;
+
+    img {
+      width: 100%;
+    }
+
+    .snippet_features {
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .tools .features {
+    flex-direction: column;
+    margin: 2em auto;
+    min-width: initial;
+
+    .feature {
+      margin-top: 2rem;
+    }
+  }
+
+  .brands {
+    flex-direction: column;
+    margin-top: 0;
+
+    img {
+      padding: 1.5em;
+    }
+  }
+
+  footer {
+    padding: 0 2em;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  footer {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 3.5em 0 2.4em;
+
+    .logo img {
+      width: 45%;
+    }
+
+    nav {
+      padding-bottom: 3em;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 320px;
+      justify-content: space-between;
+
+      a {
+        padding-top: 0.5em;
+      }
+    }
+
+    .social {
+      width: 35%;
+    }
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  /* buttons width 100% */
+  button {
+    width: 100%;
+    margin: 1em auto;
+  }
+}

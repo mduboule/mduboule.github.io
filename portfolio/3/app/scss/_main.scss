@@ -1,0 +1,181 @@
+.wrapper {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: url(img/bg-header-desktop.png) top no-repeat;
+}
+
+/* General center alignement */
+.wrapper section {
+  margin-bottom: 2rem;
+  padding: 0 1.5em;
+}
+
+header {
+  margin: auto;
+  max-width: 38em;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+/*** HEADER ***/
+.page-header {
+  padding: 0 1.5em;
+
+  h1 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+/*** SNIPPET ***/
+.snippet {
+  display: grid;
+  grid-template:
+    "header header" auto
+    "img features" auto/
+    50% 50%;
+  width: 100%;
+
+  header {
+    grid-area: header;
+    justify-self: center;
+    margin-bottom: 3rem;
+  }
+  .snippet_img {
+    grid-area: img;
+    justify-self: right;
+    // width: 100%;
+  }
+  .snippet_features {
+    grid-area: features;
+    margin-left: 5rem;
+    padding-top: 1em;
+    width: 60%;
+    max-width: 22rem;
+    font-size: 16px;
+
+    h3 {
+      font-weight: 400;
+      padding-top: 2em;
+      margin-bottom: 0;
+    }
+
+    p {
+      padding-top: 0em;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.clipboard {
+  header {
+    margin: 6rem auto;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.tools {
+  header {
+    margin: auto;
+  }
+
+  .features {
+    display: flex;
+
+    justify-content: space-around;
+    margin: 4em auto;
+    font-size: 0.8rem;
+    width: 80%;
+    min-width: 762px;
+
+    .feature {
+      flex: 0 30%;
+      text-align: center;
+      line-height: 1.8em;
+
+      h3 {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.brands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 4rem;
+  margin-bottom: 0;
+
+  img {
+    flex: 0 auto;
+    padding: 0.5rem;
+  }
+}
+
+.cta {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  p {
+    line-height: 1.7em;
+    margin-bottom: 2em;
+  }
+}
+
+footer {
+  display: flex;
+
+  width: 100%;
+  height: 140px;
+  margin-top: 7em;
+  padding: 0 6em;
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f6f6f6;
+  color: $darkGray;
+
+  .logo {
+    flex: 1;
+
+    img {
+      width: 30%;
+    }
+  }
+
+  nav {
+    padding-top: 2em;
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    flex-direction: column;
+    line-height: 2em;
+
+    a {
+      color: $darkGray;
+      text-decoration: none;
+    }
+  }
+
+  .social {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+      flex: 1;
+    }
+  }
+}
