@@ -1,13 +1,9 @@
-:root {
-    // Primariy colors
-    // --prim-soft-blue: hsl(231, 69%, 60%);
-    // --prim-soft-red: hsl(0, 94%, 66%);
-    $prim-blue: hsl(231, 69%, 60%);
-    $prim-red: hsl(0, 94%, 66%);
+  // Primariy colors
+  $prim-blue: hsl(231, 69%, 60%);
+  $prim-red: hsl(0, 94%, 66%);
 
-    // Neutral
-    // --neutral-gray-blue: hsl(229, 8%, 60%);
-    // --neutral-dark-blue: hsl(229, 31%, 21%);
-    $neutral-gray: hsl(229, 8%, 60%);
-    $neutral-blue: hsl(229, 31%, 21%);
-  }
+  // Neutral
+  $neutral-gray: hsl(229, 8%, 60%);
+  $light-neutral-gray: rgba(145, 148, 161, .3);
+  $neutral-blue: hsl(229, 31%, 21%);
+  $white: #ffffff;

@@ -1,0 +1,123 @@
+.page-header {
+    width: 100%;
+    padding: 2.5em 1.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    z-index: 100;
+    position: relative;
+
+    .nav-toggle {
+        color: $white;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    /* Active by default when loading the page, unlike the hide class below */
+    .nav-toggle.active {
+        color: $neutral-blue;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    padding: 100px 1.6em 2em 1.6em;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(37,43,70,.93);
+    z-index:10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 350ms ease-in-out; // Entire menu in/out
+
+    .nav{
+         opacity: 1;
+         transition: opacity 250ms ease-in-out 250ms; // Text coming in (+250ms delay)
+    }
+    .nav.hide {
+        opacity: 0;
+        transition: opacity 120ms ease-in-out; // Text going out
+    }
+    nav {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        flex: 1;
+    }
+
+    nav > * {
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        color: $white;
+        border-top: 1px solid $light-neutral-gray;
+        flex: 0;
+    }
+
+    .login {
+        background: none;
+        border: 2px solid $white;
+        font-size: 1rem;
+        padding: .5em 1em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .login:hover {
+        color: $prim-red;
+        border: 2px solid $prim-red;
+    }
+
+    a {
+        padding: 1.2em 0;
+    }
+
+    a:nth-child(3) {
+        border-bottom: 1px solid $light-neutral-gray;
+        margin-bottom: 1.3em;
+    }
+
+    a:hover {
+        color: $prim-red;
+    }
+
+    .socials {
+        font-size: 1.6rem;
+        position: relative;
+
+        i {
+            margin: 0 15px;
+            color: $white;
+        }
+
+        a:hover i {
+            color: $prim-red;
+        }
+    }
+}
+
+.hidden-menu {
+    transform: scaleX(0);
+}
+
+.hide {
+    opacity: 0;
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+figure.hero {
+    margin-top: 0;
+}
+
+img {
+    width: 80%;
+}

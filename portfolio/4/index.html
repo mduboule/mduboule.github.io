@@ -6,25 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
-  <link rel="stylesheet" href="dist/style.min.css?cb=1561599191916" />
+  <link rel="stylesheet" href="dist/style.min.css?cb=1561850008608" />
+  <script src="https://kit.fontawesome.com/056e2c0d67.js"></script>
   <link rel="shortcut icon" type="image/png" href="dist/img/favicon-32x32.png" />
 </head>
 
 <body>
-  <header class="pageHeader">
-    <div class="logo">
-      <img src="dist/img/logo-bookmark.svg" alt="Logo Bookmark">
-    </div>
-    <nav>
-      <a href="#">Features</a>
-      <a href="#">Pricing</a>
-      <a href="#">Contact</a>
-      <button>Login</button>
-    </nav>
+  <header class="page-header">
+    <object id="logo" type="image/svg+xml" data="dist/img/logo-bookmark.svg" alt="Logo Bookmark">
+      <img src="dist/img/logo-bookmark.svg" alt="Logo Bookmark" />
+    </object>
+    <span>
+      <i onclick="setTimeout(toggle(), 5900)" class="nav-toggle fas fa-bars active" id="nav-toggle"></i>
+    </span>
   </header>
+  <div class="menu hidden-menu" id="menu">
+    <div class="nav hide" id="main-nav">
+      <nav>
+        <a href="/">Features</a>
+        <a href="/">Pricing</a>
+        <a href="/">Contact</a>
+        <button class="login">Login</button>
+      </nav>
+    </div>
+    <div class="socials hide" id="socials">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
   <section class="hero">
+    <figure class="hero"><img src="dist/img/illustration-hero.svg" alt="Hero illustration"></figure>
     <div class="panel">
-      <h1>A Simple Bookmark Manager</h1>
+      <!-- <h1>A Simple Bookmark Manager</h1> -->
+      <h1 style="font-family: 'Rubik-reg';">A Simple Bookmark Manager</h1>
       <p>
         A clean and simple interface to organize your favourite websites. Open a new
         browser tab and see your sites load instantly. Try it for free.
@@ -32,7 +46,6 @@
       <button class="btn-1">Get it on Chrome</button>
       <button class="btn-2">Get it on Firefox</button>
     </div>
-    <figure class="hero"><img src="dist/img/illustration-hero.svg" alt="Hero illustration"></figure>
   </section>
   <section class="features">
     <header>
@@ -89,21 +102,24 @@
       </p>
     </header>
     <div class="browser">
-      <img src="dist/img/logo-chrome.svg" alt="Logo Chrome">
+      <img class="chrome" src="dist/img/logo-chrome.svg" alt="Logo Chrome">
       <h3>Add to Chrome</h3>
       <p>Minimum version 62</p>
+      <img src="dist/img/bg-dots.svg" alt="Doted pattern">
       <button class="btn-1">Add & Install Extension</button>
     </div>
     <div class="browser">
-      <img src="dist/img/logo-firefox.svg" alt="Logo Firefox">
+      <img class="firefox" src="dist/img/logo-firefox.svg" alt="Logo Firefox">
       <h3>Add to Firefox</h3>
       <p>Minimum version 55</p>
+      <img src="dist/img/bg-dots.svg" alt="Doted pattern">
       <button class="btn-1">Add & Install Extension</button>
     </div>
     <div class="browser">
-      <img src="dist/img/logo-opera.svg" alt="Logo Opera">
+      <img class="opera" src="dist/img/logo-opera.svg" alt="Logo Opera">
       <h3>Add to Opera</h3>
       <p>Minimum version 46</p>
+      <img src="dist/img/bg-dots.svg" alt="Doted pattern">
       <button class="btn-1">Add & Install Extension</button>
     </div>
   </section>
@@ -173,7 +189,7 @@
       Coded by <a href="#">Marius Duboule</a>.
     </p>
   </footer>
-  <script src="dist/all.js?cb=1561599191916"></script>
+  <script src="dist/all.js?cb=1561850008608"></script>
 </body>
 
 </html>
