@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
-  <link rel="stylesheet" href="dist/style.min.css?cb=1561850008608" />
+  <link rel="stylesheet" href="dist/style.min.css?cb=1561599191916" />
   <script src="https://kit.fontawesome.com/056e2c0d67.js"></script>
   <link rel="shortcut icon" type="image/png" href="dist/img/favicon-32x32.png" />
 </head>
@@ -17,11 +17,11 @@
       <img src="dist/img/logo-bookmark.svg" alt="Logo Bookmark" />
     </object>
     <span>
-      <i onclick="setTimeout(toggle(), 5900)" class="nav-toggle fas fa-bars active" id="nav-toggle"></i>
+      <i onclick="setTimeout(toggle(), 100)" class="nav-toggle fas fa-bars active" id="nav-toggle"></i>
     </span>
   </header>
   <div class="menu hidden-menu" id="menu">
-    <div class="nav hide" id="main-nav">
+    <div class="nav hidden-nav" id="main-nav">
       <nav>
         <a href="/">Features</a>
         <a href="/">Pricing</a>
@@ -29,14 +29,17 @@
         <button class="login">Login</button>
       </nav>
     </div>
-    <div class="socials hide" id="socials">
+    <div class="socials hidden-socials" id="socials">
       <a href="#"><i class="fab fa-facebook-square"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
   <section class="hero">
-    <figure class="hero"><img src="dist/img/illustration-hero.svg" alt="Hero illustration"></figure>
-    <div class="panel">
+    <figure class="hero">
+      <img class="hero" src="dist/img/illustration-hero.svg" alt="Hero illustration">
+      <div class="img-background bg-right"></div>
+    </figure>
+    <div class="hero-panel">
       <!-- <h1>A Simple Bookmark Manager</h1> -->
       <h1 style="font-family: 'Rubik-reg';">A Simple Bookmark Manager</h1>
       <p>
@@ -56,12 +59,15 @@
       </p>
     </header>
     <nav class="features">
-      <a href="#" class="active">Simple Bookmarking</a>
-      <a href="#">Speedy Searching</a>
-      <a href="#">Easy Sharing</a>
+      <button href="#feature1" onclick="toggleTab(this)" data-tab-target="1" class="active">Simple Bookmarking</button>
+      <button href="#feature2" onclick="toggleTab(this)" data-tab-target="2" class="">Speedy Searching</button>
+      <button href="#feature3" onclick="toggleTab(this)" data-tab-target="3" class="">Easy Sharing</button>
     </nav>
-    <div class="tab1">
-      <figure><img src="dist/img/illustration-features-tab-1.svg" alt="Illustration for Bookmark in one click"></figure>
+    <div class="feature tab1" id="feature1" data-tab="1">
+      <figure>
+        <img src="dist/img/illustration-features-tab-1.svg" alt="Illustration for Bookmark in one click">
+        <div class="img-background bg-left"></div>
+      </figure>
       <h2>Bookmark in one click</h2>
       <p>
         Organize your bookmarks however you like. Our simple drag-and-drop interface
@@ -70,8 +76,10 @@
       <button class="btn-1">More Info</button>
     </div>
     </div>
-    <div class="tab2">
-      <figure><img src="dist/img/illustration-features-tab-2.svg" alt="Illustration for intelligent search feature">
+    <div class="feature tab2 hide" id="feature2" data-tab="2">
+      <figure>
+        <img src="dist/img/illustration-features-tab-2.svg" alt="Illustration for intelligent search feature">
+        <div class="img-background bg-left"></div>
       </figure>
       <h2>Intelligent search</h2>
       <p>
@@ -81,8 +89,11 @@
       <button class="btn-1">More Info</button>
     </div>
     </div>
-    <div class="tab3">
-      <figure><img src="dist/img/illustration-features-tab-3.svg" alt="Illustration for sharing bookmark"></figure>
+    <div class="feature tab3 hide" id="feature3" data-tab="3">
+      <figure>
+        <img src="dist/img/illustration-features-tab-3.svg" alt="Illustration for sharing bookmark">
+        <div class="img-background bg-left"></div>
+      </figure>
       <div class="panel">
         <h2>Share your bookmarks</h2>
         <p>
@@ -102,65 +113,81 @@
       </p>
     </header>
     <div class="browser">
-      <img class="chrome" src="dist/img/logo-chrome.svg" alt="Logo Chrome">
+      <img class="logo chrome" src="dist/img/logo-chrome.svg" alt="Logo Chrome">
       <h3>Add to Chrome</h3>
-      <p>Minimum version 62</p>
-      <img src="dist/img/bg-dots.svg" alt="Doted pattern">
+      <p class="browser-version">Minimum version 62</p>
+      <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
       <button class="btn-1">Add & Install Extension</button>
     </div>
     <div class="browser">
-      <img class="firefox" src="dist/img/logo-firefox.svg" alt="Logo Firefox">
+      <img class="logo firefox" src="dist/img/logo-firefox.svg" alt="Logo Firefox">
       <h3>Add to Firefox</h3>
-      <p>Minimum version 55</p>
-      <img src="dist/img/bg-dots.svg" alt="Doted pattern">
+      <p class="browser-version">Minimum version 55</p>
+      <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
       <button class="btn-1">Add & Install Extension</button>
     </div>
     <div class="browser">
-      <img class="opera" src="dist/img/logo-opera.svg" alt="Logo Opera">
+      <img class="logo opera" src="dist/img/logo-opera.svg" alt="Logo Opera">
       <h3>Add to Opera</h3>
-      <p>Minimum version 46</p>
-      <img src="dist/img/bg-dots.svg" alt="Doted pattern">
+      <p class="browser-version">Minimum version 46</p>
+      <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
       <button class="btn-1">Add & Install Extension</button>
     </div>
   </section>
   <section class="questions">
     <header>
-      <h2>Frequently Asked Questions</h2>
+      <h2>Frequently Asked<br> Questions</h2>
       <p>
         Here are some of our FAQs. If you have any other questions you’d like
         answered please feel free to email us.
       </p>
     </header>
-    <div class="question q1">
-      <button class="question">What is Bookmark?</button>
-      <img src="" alt="" class="status">
-      <p class="answer">
+    <div class="question-answer q1">
+      <button class="question" onclick="toggleAnswer(this)" data-question="1">
+        <p>What is Bookmark?</p>
+        <object id="arrow-q1" type="image/svg+xml" data="dist/img/icon-arrow.svg" alt="Opening arrow">
+          <img src="dist/img/icon-arrow.svg" alt="Opening arrow">
+        </object>
+      </button>
+      <p class="answer q1 hidden-answer" id="answer1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
         justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
       </p>
     </div>
-    <div class="question q2">
-      <button class="question">How can I request a new browser?</button>
-      <img src="" alt="" class="status">
-      <p class="answer">
+    <div class="question-answer q2">
+      <button class="question" onclick="toggleAnswer(this)" data-question="2">
+        <p>How can I request a new browser?</p>
+        <object id="arrow-q2" type="image/svg+xml" data="dist/img/icon-arrow.svg" alt="Opening arrow">
+          <img src="dist/img/icon-arrow.svg" alt="Opening arrow">
+        </object>
+      </button>
+      <p class="answer q2 hidden-answer" id="answer2">
         Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
         Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
         ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
         Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
       </p>
     </div>
-    <div class="question q3">
-      <button class="question">Is there a mobile app?</button>
-      <img src="" alt="" class="status">
-      <p class="answer">
+    <div class="question-answer q3">
+      <button class="question" onclick="toggleAnswer(this)" data-question="3">
+        <p>Is there a mobile app?</p>
+        <object id="arrow-q3" type="image/svg+xml" data="dist/img/icon-arrow.svg" alt="Opening arrow">
+          <img src="dist/img/icon-arrow.svg" alt="Opening arrow">
+        </object>
+      </button>
+      <p class="answer q3 hidden-answer" id="answer3">
         Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
         urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
         sollicitudin ex et ultricies bibendum.</p>
     </div>
-    <div class="question q4">
-      <button class="question">What about other Chromium browsers?</button>
-      <img src="" alt="" class="status">
-      <p class="answer">
+    <div class="question-answer q4">
+      <button class="question" onclick="toggleAnswer(this)" data-question="4">
+        <p>What about other Chromium browsers?</p>
+        <object id="arrow-q4" type="image/svg+xml" data="dist/img/icon-arrow.svg" alt="Opening arrow">
+          <img src="dist/img/icon-arrow.svg" alt="Opening arrow">
+        </object>
+      </button>
+      <p class="answer q4 hidden-answer" id="answer4">
         Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
         vitae neque eget nisl gravida pellentesque non ut velit.
       </p>
@@ -172,24 +199,30 @@
     <h2 class="inverted">Stay up-to-date with what we’re doing</h2>
     <form action="#" class="subscribe">
       <input type="email" name="email" id="email" placeholder="Enter your email address">
-      <input type="submit" value="Subscribe">
+      <button class="btn-3" type="submit">Subscribe</button>
     </form>
   </section>
   <footer class="main">
     <nav>
-      <img src="dist/img/logo-bookmark.svg" alt="Logo Bookmark">
+      <object class="logo-footer" type="image/svg+xml" data="dist/img/logo-bookmark-light.svg" alt="Logo Bookmark">
+        <!-- <img src="dist/img/logo-bookmark-light.svg" alt="Opening arrow"> -->
+      </object>
       <a href="#">Features</a>
       <a href="#">Pricing</a>
       <a href="#">Contact</a>
+      <div class="socials-footer">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </nav>
   </footer>
   <footer class="credits">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Marius Duboule</a>.
+      Coded by <a href="https://github.com/mduboule" target="_blank">Marius Duboule</a>.
     </p>
   </footer>
-  <script src="dist/all.js?cb=1561850008608"></script>
+  <script src="dist/all.js?cb=1561599191916"></script>
 </body>
 
 </html>

@@ -16,5 +16,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Rubik-lig';
+    src: url('fonts/rubik-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $font-reg: 'Rubik-reg';
 $font-med: 'Rubik-med';
+$font-lig: 'Rubik-lig';

@@ -1,10 +1,10 @@
 .page-header {
     width: 100%;
-    padding: 2.5em 1.6em;
+    // padding: 2.5em 1.6em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2em;
+    margin-bottom: 4.8em;
     z-index: 100;
     position: relative;
 
@@ -23,6 +23,7 @@
 .menu {
     position: absolute;
     top: 0;
+    left: 0;
     padding: 100px 1.6em 2em 1.6em;
     height: 100vh;
     width: 100%;
@@ -37,11 +38,11 @@
 
     .nav{
          opacity: 1;
-         transition: opacity 250ms ease-in-out 250ms; // Text coming in (+250ms delay)
+         transition: opacity 250ms ease-in-out 300ms; // Text coming in (+250ms delay)
     }
-    .nav.hide {
+    .nav.hidden-nav {
         opacity: 0;
-        transition: opacity 120ms ease-in-out; // Text going out
+        transition: opacity 70ms ease-in-out; // Text going out
     }
     nav {
         display: flex;
@@ -106,18 +107,11 @@
     transform: scaleX(0);
 }
 
-.hide {
+.hidden-nav,
+.hidden-socials {
     opacity: 0;
 }
 
 .stop-scrolling {
     overflow: hidden;
-}
-
-figure.hero {
-    margin-top: 0;
-}
-
-img {
-    width: 80%;
 }
