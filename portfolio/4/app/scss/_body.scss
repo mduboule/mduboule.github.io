@@ -181,6 +181,7 @@ nav.features {
 
     form {
         display: flex;
+        position: relative;
         justify-content: space-between;
         flex-wrap: wrap;
 
@@ -190,12 +191,50 @@ nav.features {
 
         input {
             border: none;
-            color: $neutral-gray;
+            color: $neutral-blue;
             font-size: .9rem;
             border-radius: 6px;
             padding: 1em;
             outline: none;
             box-shadow: inset 0px 0px 10px 5px rgba(83, 104, 223, .1);
+        }
+
+        .email {
+            position: relative;
+        }
+
+        .warning {
+            position: absolute;
+            color: $prim-red;
+            font-size: 1.2rem;
+            right: 15px;
+            top: 13px;
+            display: none;
+        }
+
+        .validation-message {
+            font-size: .6rem;
+            font-family: $font-reg;
+            font-style: italic;
+            text-align: left;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            position: relative;
+            padding: 6px 0 4px 12px;
+            bottom: 4px;
+            z-index: -5;
+            margin:0;
+            display: none;
+        }
+
+        .validated {
+            color: $white;
+            background-color: #009933;
+        }
+
+        .error {
+            color: $white;
+            background-color: $prim-red;
         }
 
         button {

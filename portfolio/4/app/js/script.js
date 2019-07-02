@@ -73,3 +73,24 @@ function toggleAnswer(question) {
         arrow.getSVGDocument().querySelector('path').setAttribute('stroke', 'rgb(83, 104, 223)');
     }
 }
+
+function validateEmail(inputText) {
+    let email = document.form1.email;
+    let error = document.querySelector('p.error');
+    let emailValidated = document.querySelector('p.validated');
+    let warning = document.querySelector('#warning');
+
+    console.log(error);
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(inputText.value.match(mailformat)) {
+        emailValidated.style.display = "block";
+        email.focus();
+        return true;
+    } else {
+        email.style.border = "2px solid #fa5757";
+        error.style.display = "block";
+        warning.style.display = "block";
+        email.focus();
+        return false;
+    }
+}

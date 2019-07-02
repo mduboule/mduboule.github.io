@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
+  <title>Bookmark</title>
   <link rel="stylesheet" href="dist/style.min.css?cb=1561599191916" />
   <script src="https://kit.fontawesome.com/056e2c0d67.js"></script>
   <link rel="shortcut icon" type="image/png" href="dist/img/favicon-32x32.png" />
@@ -194,12 +194,15 @@
     </div>
     <button class="btn-1">More Info</button>
   </section>
-  <section class="connect">
+  <section class="connect" id="connect">
     <h4>35,000+ already joined</h4>
     <h2 class="inverted">Stay up-to-date with what we’re doing</h2>
-    <form action="#" class="subscribe">
-      <input type="email" name="email" id="email" placeholder="Enter your email address">
-      <button class="btn-3" type="submit">Subscribe</button>
+    <form name="form1" action="#connect" class="subscribe">
+      <input name="email" type="email" class="email" name="email" id="email" placeholder="Enter your email address">
+      <span class="warning" id="warning"><i class="fas fa-exclamation-circle"></i></span>
+      <p class="validation-message error">Whoops, make sure it's an email</p>
+      <p class="validation-message validated">Thank you, got it!</p>
+      <button class="btn-3" type="submit" onclick="validateEmail(document.form1.email)">Subscribe</button>
     </form>
   </section>
   <footer class="main">
