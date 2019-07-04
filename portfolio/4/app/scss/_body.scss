@@ -3,12 +3,31 @@ section.hero {
     padding: 0;
     position: relative;
 
+    @media screen and (min-width: 769px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     img.hero {
         width: 113.5%;
         height: auto;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+
+        @media screen and (min-width: 400px) {
+            position: static;
+            width: 100%;
+            left: 0px;
+            transform: none;
+        }
+
+        @media screen and (min-width: 769px) {
+            flex: 1 1 50%;
+        }
+
     }
 
     .img-background {
@@ -18,14 +37,51 @@ section.hero {
 }
 
 .hero-panel {
+
+    @media screen and (min-width: 769px) {
+        flex: 1 0 50%;
+        text-align: left;
+        max-width: 525px;
+
+        .btn-1:first-of-type {
+            margin-left: 0;
+        }
+    }
+
     p {
+        padding: 0 1.6em;
+
+        @media screen and (min-width: 769px) {
+            padding: 0;
+        }
+    }
+}
+
+.features {
+    @media screen and (min-width: 769px) {
+        margin-top: 3em;
+
+        h2 {
+            margin-top: 0;
+        }
     }
 }
 
 nav.features {
+    max-width: 731px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     margin-bottom: 5em;
+
+    @media screen and (min-width: 769px) {
+        width: 100%;
+        flex-direction: row;
+
+        figure, .panel {
+            flex: 1;
+        }
+    }
 
     button {
         all: unset;
@@ -34,6 +90,7 @@ nav.features {
         border-bottom: 1px solid rgba(145,148,161,.3);
         position: relative;
         color: $neutral-gray;
+        flex: 1 33.3%;
 
         &:hover {
             color: $prim-red;
@@ -42,6 +99,10 @@ nav.features {
 
     button:first-child {
         border-top: 1px solid rgba(145,148,161,.3);
+
+        @media screen and (min-width: 769px) {
+            border-top: none;
+        }
     }
 
     .active {
@@ -57,12 +118,51 @@ nav.features {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+
+        @media screen and (min-width: 769px) {
+            width: 100%;
+        }
     }
 }
 
 .feature {
+
+    @media screen and (min-width: 769px) {
+        display: flex;
+    }
+
     figure {
         margin-bottom: 5em;
+
+        @media screen and (min-width: 769px) {
+            flex: 1;
+            margin-right: 3%;
+        }
+    }
+
+    .panel {
+        @media screen and (min-width: 769px) {
+            flex: 1;
+            text-align: left;
+            padding-left: 7%;
+
+            h2 {
+                margin-top: 2.5em;
+            }
+        }
+    }
+}
+
+.browsers {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: 715px) {
+        flex-direction: row;
     }
 }
 
@@ -72,8 +172,28 @@ nav.features {
     border-radius: 10px;
     box-shadow: 0 12px 12px -2px rgba(83, 104, 223, .22);
 
+    @media screen and (min-width: 715px) {
+        margin: 3.5em 0em;
+        flex-basis: 30%;
+        max-width: 281px;
+
+        &:first-of-type {
+            position: relative;
+            bottom: 2em;
+        }
+        &:last-of-type {
+            position: relative;
+            top: 2em;
+        }
+    }
+
     .logo {
         width: 43%;
+        max-width: 125px;
+
+        @media screen and (min-width: 715px) {
+            width: 47%;
+        }
     }
 
     .browser-version {
@@ -85,6 +205,10 @@ nav.features {
         width: calc(100vw - 7.1em);
         left: 50%;
         transform: translateX(-50%);
+
+        @media screen and (min-width: 715px) {
+            width: 100%;
+        }
     }
 
     button {
@@ -92,6 +216,11 @@ nav.features {
         margin: 0;
         margin-top: 1.5em;
     }
+}
+
+.questions {
+    max-width: 540px;
+    margin: auto;
 }
 
 .question-answer {
@@ -110,18 +239,18 @@ nav.features {
         position: relative;
     }
 
+    button:hover {
+        color: $prim-red;
+    }
+
     p {
         display: inline-block;
         text-align: left;
         padding: 0;
         margin: 0;
-        font-size: .9rem;
+        // font-size: .9rem;
         font-family: inherit;
         color:inherit;
-
-        &:hover {
-            color: $prim-red;
-        }
     }
 
     object {
@@ -167,6 +296,15 @@ nav.features {
     transform: translateX(-50%);
     padding: 2em 2em;
 
+    .container {
+        max-width: 445px;
+        margin: auto;
+
+        @media screen and (min-width: 769px) {
+            margin-bottom: 2.8em;
+        }
+    }
+
     h4 {
         padding-top: 2.4em;
         margin-bottom: 0;
@@ -183,10 +321,15 @@ nav.features {
         display: flex;
         position: relative;
         justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
 
         * {
             flex: 1 100%;
+
+            @media screen and (min-width: 769px) {
+                flex-basis: auto;
+            }
         }
 
         input {
@@ -201,6 +344,11 @@ nav.features {
 
         .email {
             position: relative;
+            flex: 1;
+
+            @media screen and (min-width: 769px) {
+                // max-width: 301px;
+            }
         }
 
         .warning {
@@ -210,6 +358,10 @@ nav.features {
             right: 15px;
             top: 13px;
             display: none;
+
+            @media screen and (min-width: 769px) {
+                right: 130px;
+            }
         }
 
         .validation-message {
@@ -225,6 +377,12 @@ nav.features {
             z-index: -5;
             margin:0;
             display: none;
+
+            @media screen and (min-width: 769px) {
+                position: absolute;
+                width: 326px;
+                bottom: -23px;
+            }
         }
 
         .validated {
@@ -240,27 +398,59 @@ nav.features {
         button {
             margin: 1.4em 0 2.8em 0;
             border-radius: 6px;
+
+            @media screen and (min-width: 769px) {
+                flex: 0;
+                margin: 0;
+                margin-left: 1em;
+            }
+
         }
     }
 }
 
 footer.main {
-    background-color: $neutral-blue;
-    color: $white;
     width: 100vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    background-color: $neutral-blue;
+
+    .container {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        color: $white;
+        max-width: 1110px;
+
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1em 2em;
+        }
+    }
+
+    .logo-footer {
+        margin: 3em 0 1em 0;
+
+        @media screen and (min-width: 769px) {
+            margin: 0;
+            margin-right: 5%;
+        }
+    }
 
     nav {
+        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-transform: uppercase;
         font-family: $font-lig;
 
-        .logo-footer {
-            margin: 3em 0 1em 0;
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
         }
 
         a {
@@ -279,7 +469,11 @@ footer.main {
     .socials-footer {
         margin: 2em;
 
+        @media screen and (min-width: 769px) {
+            margin: 0;
+        }
         a {
+            color: $white;
             font-size: 1.7rem;
             padding: .2em;
             margin: .6em;
@@ -289,5 +483,10 @@ footer.main {
 
 .attribution {
     margin: .5em;
+    padding-top: .5em;
     font-size: .7rem;
+}
+
+.hide {
+    display: none;
 }

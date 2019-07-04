@@ -12,6 +12,10 @@
         color: $white;
         font-size: 1.3rem;
         cursor: pointer;
+
+        @media screen and (min-width: 769px) {
+            display: none;
+        }
     }
 
     /* Active by default when loading the page, unlike the hide class below */
@@ -36,6 +40,14 @@
     transform-origin: left;
     transition: transform 350ms ease-in-out; // Entire menu in/out
 
+    @media screen and (min-width: 769px) {
+        background-color: initial;
+        height: auto;
+        padding: 0;
+        right: 0;
+        margin: 3.5em
+    }
+
     .nav{
          opacity: 1;
          transition: opacity 250ms ease-in-out 300ms; // Text coming in (+250ms delay)
@@ -43,6 +55,10 @@
     .nav.hidden-nav {
         opacity: 0;
         transition: opacity 70ms ease-in-out; // Text going out
+
+        @media screen and (min-width: 769px) {
+            opacity: 1;
+        }
     }
     nav {
         display: flex;
@@ -51,6 +67,10 @@
         height: 100%;
         width: 100%;
         flex: 1;
+
+        @media screen and (min-width: 769px) {
+            flex-direction: initial;
+        }
     }
 
     nav > * {
@@ -59,6 +79,11 @@
         color: $white;
         border-top: 1px solid $light-neutral-gray;
         flex: 0;
+
+        @media screen and (min-width: 769px) {
+            color: $neutral-blue;
+            border: none;
+        }
     }
 
     .login {
@@ -77,11 +102,20 @@
 
     a {
         padding: 1.2em 0;
+
+        @media screen and (min-width: 769px) {
+            padding: .3em 1em;
+            font-size: .8rem;
+        }
     }
 
     a:nth-child(3) {
         border-bottom: 1px solid $light-neutral-gray;
         margin-bottom: 1.3em;
+
+        @media screen and (min-width: 769px) {
+            border: none;
+        }
     }
 
     a:hover {
@@ -91,6 +125,10 @@
     .socials {
         font-size: 1.6rem;
         position: relative;
+
+        @media screen and (min-width: 769px) {
+            display: none;
+        }
 
         i {
             margin: 0 15px;
@@ -105,11 +143,19 @@
 
 .hidden-menu {
     transform: scaleX(0);
+
+    @media screen and (min-width: 769px) {
+        transform: none;
+    }
 }
 
 .hidden-nav,
 .hidden-socials {
     opacity: 0;
+
+    @media screen and (min-width: 769px) {
+        opacity: 1;
+    }
 }
 
 .stop-scrolling {

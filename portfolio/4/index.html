@@ -68,12 +68,14 @@
         <img src="dist/img/illustration-features-tab-1.svg" alt="Illustration for Bookmark in one click">
         <div class="img-background bg-left"></div>
       </figure>
-      <h2>Bookmark in one click</h2>
-      <p>
-        Organize your bookmarks however you like. Our simple drag-and-drop interface
-        gives you complete control over how you manage your favourite sites.
-      </p>
-      <button class="btn-1">More Info</button>
+      <div class="panel">
+        <h2>Bookmark in one click</h2>
+        <p>
+          Organize your bookmarks however you like. Our simple drag-and-drop interface
+          gives you complete control over how you manage your favourite sites.
+        </p>
+        <button class="btn-1">More Info</button>
+      </div>
     </div>
     </div>
     <div class="feature tab2 hide" id="feature2" data-tab="2">
@@ -81,12 +83,14 @@
         <img src="dist/img/illustration-features-tab-2.svg" alt="Illustration for intelligent search feature">
         <div class="img-background bg-left"></div>
       </figure>
-      <h2>Intelligent search</h2>
-      <p>
-        Our powerful search feature will help you find saved sites in no time at all.
-        No need to trawl through all of your bookmarks.
-      </p>
-      <button class="btn-1">More Info</button>
+      <div class="panel">
+        <h2>Intelligent search</h2>
+        <p>
+          Our powerful search feature will help you find saved sites in no time at all.
+          No need to trawl through all of your bookmarks.
+        </p>
+        <button class="btn-1">More Info</button>
+      </div>
     </div>
     </div>
     <div class="feature tab3 hide" id="feature3" data-tab="3">
@@ -112,31 +116,33 @@
         got a favourite you’d like us to prioritize.
       </p>
     </header>
-    <div class="browser">
-      <img class="logo chrome" src="dist/img/logo-chrome.svg" alt="Logo Chrome">
-      <h3>Add to Chrome</h3>
-      <p class="browser-version">Minimum version 62</p>
-      <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
-      <button class="btn-1">Add & Install Extension</button>
-    </div>
-    <div class="browser">
-      <img class="logo firefox" src="dist/img/logo-firefox.svg" alt="Logo Firefox">
-      <h3>Add to Firefox</h3>
-      <p class="browser-version">Minimum version 55</p>
-      <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
-      <button class="btn-1">Add & Install Extension</button>
-    </div>
-    <div class="browser">
-      <img class="logo opera" src="dist/img/logo-opera.svg" alt="Logo Opera">
-      <h3>Add to Opera</h3>
-      <p class="browser-version">Minimum version 46</p>
-      <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
-      <button class="btn-1">Add & Install Extension</button>
+    <div class="browsers">
+      <div class="browser">
+        <img class="logo chrome" src="dist/img/logo-chrome.svg" alt="Logo Chrome">
+        <h3>Add to Chrome</h3>
+        <p class="browser-version">Minimum version 62</p>
+        <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
+        <button class="btn-1">Add & Install Extension</button>
+      </div>
+      <div class="browser">
+        <img class="logo firefox" src="dist/img/logo-firefox.svg" alt="Logo Firefox">
+        <h3>Add to Firefox</h3>
+        <p class="browser-version">Minimum version 55</p>
+        <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
+        <button class="btn-1">Add & Install Extension</button>
+      </div>
+      <div class="browser">
+        <img class="logo opera" src="dist/img/logo-opera.svg" alt="Logo Opera">
+        <h3>Add to Opera</h3>
+        <p class="browser-version">Minimum version 46</p>
+        <img class="separator" src="dist/img/bg-dots.svg" alt="Doted pattern">
+        <button class="btn-1">Add & Install Extension</button>
+      </div>
     </div>
   </section>
   <section class="questions">
     <header>
-      <h2>Frequently Asked<br> Questions</h2>
+      <h2>Frequently Asked Questions</h2>
       <p>
         Here are some of our FAQs. If you have any other questions you’d like
         answered please feel free to email us.
@@ -195,33 +201,37 @@
     <button class="btn-1">More Info</button>
   </section>
   <section class="connect" id="connect">
-    <h4>35,000+ already joined</h4>
-    <h2 class="inverted">Stay up-to-date with what we’re doing</h2>
-    <form name="form1" action="#connect" class="subscribe">
-      <input name="email" type="email" class="email" name="email" id="email" placeholder="Enter your email address">
-      <span class="warning" id="warning"><i class="fas fa-exclamation-circle"></i></span>
-      <p class="validation-message error">Whoops, make sure it's an email</p>
-      <p class="validation-message validated">Thank you, got it!</p>
-      <button class="btn-3" type="submit" onclick="validateEmail(document.form1.email)">Subscribe</button>
-    </form>
+    <div class="container">
+      <h4>35,000+ already joined</h4>
+      <h2 class="inverted">Stay up-to-date with what we’re doing</h2>
+      <form name="form1" action="#connect" class="subscribe">
+        <input name="email" type="email" class="email" name="email" id="email" placeholder="Enter your email address">
+        <span class="warning" id="warning"><i class="fas fa-exclamation-circle"></i></span>
+        <p class="validation-message error">Whoops, make sure it's an email</p>
+        <p class="validation-message validated">Thank you, got it!</p>
+        <button class="btn-3" type="submit" onclick="validateEmail(document.form1.email)">Subscribe</button>
+      </form>
+    </div>
   </section>
   <footer class="main">
-    <nav>
+    <div class="container">
       <object class="logo-footer" type="image/svg+xml" data="dist/img/logo-bookmark-light.svg" alt="Logo Bookmark">
-        <!-- <img src="dist/img/logo-bookmark-light.svg" alt="Opening arrow"> -->
+        <img src="dist/img/logo-bookmark-light.svg" alt="Opening arrow">
       </object>
-      <a href="#">Features</a>
-      <a href="#">Pricing</a>
-      <a href="#">Contact</a>
+      <nav>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </nav>
       <div class="socials-footer">
         <a href="#"><i class="fab fa-facebook-square"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
       </div>
-    </nav>
+    </div>
   </footer>
   <footer class="credits">
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
       Coded by <a href="https://github.com/mduboule" target="_blank">Marius Duboule</a>.
     </p>
   </footer>
