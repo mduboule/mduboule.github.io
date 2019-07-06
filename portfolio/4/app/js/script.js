@@ -61,10 +61,17 @@ function toggleAnswer(question) {
     let questionNumber = question.getAttribute("data-question");
     let answer = document.querySelector(`#answer${questionNumber}`);
     let arrow = document.querySelector(`#arrow-q${questionNumber}`);
-
     let arrowFill = arrow.getSVGDocument().querySelector('path').getAttribute('stroke');
 
-    answer.classList.toggle('hidden-answer');
+    // answer.classList.toggle('hidden-answer');
+    if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+        answer.style.marginBottom = null;
+    } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.marginBottom = "2em";
+    }
+
     arrow.classList.toggle('opened');
 
     if (arrowFill !== '#fa5757') {

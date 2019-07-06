@@ -46,7 +46,8 @@
         padding: 0;
         right: 0;
         top: -16px;
-        margin: 3.5em
+        margin: 3.5em;
+        z-index: 150;
     }
 
     .nav{
@@ -115,7 +116,7 @@
                 color: $prim-red;
                 background-color: $white;
                 border-color: $prim-red;
-                padding: calc(.8em - 2px) calc(3em - 2px);
+                padding: calc(1.5em - 2px) calc(3em - 2px);
             }
         }
     }
