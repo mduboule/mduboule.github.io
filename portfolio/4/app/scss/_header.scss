@@ -45,6 +45,7 @@
         height: auto;
         padding: 0;
         right: 0;
+        top: -16px;
         margin: 3.5em
     }
 
@@ -58,6 +59,8 @@
 
         @media screen and (min-width: 769px) {
             opacity: 1;
+            position: absolute;
+            right: 14.5%;
         }
     }
     nav {
@@ -70,6 +73,7 @@
 
         @media screen and (min-width: 769px) {
             flex-direction: initial;
+            align-items: center;
         }
     }
 
@@ -93,19 +97,35 @@
         padding: .5em 1em;
         margin-left: 0;
         margin-right: 0;
-    }
 
-    .login:hover {
-        color: $prim-red;
-        border: 2px solid $prim-red;
+        &:hover {
+            color: $prim-red;
+            border: 2px solid $prim-red;
+        }
+
+        @media screen and (min-width: 769px) {
+            color: $white;
+            background-color: $prim-red;
+            border: none;
+            font-size: .7rem;
+            padding: 1.5em 3em;
+            box-shadow: 0px 5px 5px -2px rgba(83, 104, 223, .3);
+
+            &:hover {
+                color: $prim-red;
+                background-color: $white;
+                border-color: $prim-red;
+                padding: calc(.8em - 2px) calc(3em - 2px);
+            }
+        }
     }
 
     a {
         padding: 1.2em 0;
 
         @media screen and (min-width: 769px) {
-            padding: .3em 1em;
-            font-size: .8rem;
+            padding: .3em 2em;
+            font-size: .75rem;
         }
     }
 
@@ -115,6 +135,8 @@
 
         @media screen and (min-width: 769px) {
             border: none;
+            margin-bottom: 0;
+            margin-right: 6%;
         }
     }
 

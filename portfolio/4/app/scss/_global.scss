@@ -11,7 +11,11 @@ body {
     overflow-x: hidden;
 
     @media screen and (min-width: 769px) {
-        padding-top: 3.5em;
+        padding: 3.5em 3em 0 3em;
+    }
+
+    @media screen and (min-width: 880px) {
+        padding: 3.5em 4em 0 4em;
     }
 }
 
@@ -78,6 +82,7 @@ a, a:active, a:visited {
 
 button {
     letter-spacing: .07em;
+    line-height: 1em;
     font-size: 0.8rem;
     margin: 6px;
     padding: 1.3em 1.5em;
@@ -85,11 +90,19 @@ button {
     border: none;
     cursor: pointer;
 
+    @media screen and (min-width: 769px) {
+        padding: 1.3em 2em;
+    }
+
     &:hover {
         background-color: $white;
         padding: calc(1.3em - 2px) calc(1.5em -2px);
         border-width: 2px;
         border-style: solid;
+
+        @media screen and (min-width: 769px) {
+            padding: calc(1.3em - 2px) calc(2em -2px);
+        }
     }
 }
 
