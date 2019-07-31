@@ -20,6 +20,7 @@ function toggle() {
     toggleLogo();
 
     /* Prevent from scrolling */
+    document.body.style.overflow = (document.body.style.overflow == 'hidden') ? 'scroll' : 'hidden';
     // body.classList.toggle('stop-scrolling');
 }
 

@@ -2,20 +2,27 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 2.5em 2em 0 2em;
-    font-family: $font-reg;
-    text-align: center;
-    color: $neutral-blue;
-    overflow-x: hidden;
+:root {
+    --body-side-padding: 2em;
 
     @media screen and (min-width: 769px) {
-        padding: 3.5em 3em 0 3em;
+        --body-side-padding: 3em;
     }
 
     @media screen and (min-width: 1120px) {
-        padding: 3.5em 4em 0 4em;
+        --body-side-padding: 4em;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 2.5em var(--body-side-padding) 0 var(--body-side-padding);
+    font-family: $font-reg;
+    text-align: center;
+    color: $neutral-blue;
+
+    @media screen and (min-width: 769px) {
+        padding-top: 3.5em;
     }
 }
 
@@ -69,9 +76,22 @@ p {
     font-size: .9rem;
     margin-bottom: 2em;
 
-
     @media screen and (min-width: 715px) {
         font-size: 1.1rem;
+    }
+}
+
+a.logo {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 }
 
@@ -164,20 +184,34 @@ figure {
 .img-background{
     content: '';
     display: block;
-    width: 1000px;
+    width: 72vw;
     height: 98%;
     background-color: $prim-blue;
-    border-radius: 110px;
+    border-radius: 110px 0 0 110px;
     position: absolute;
     z-index: -1;
     bottom: -15%;
-    overflow: hidden;
+
+    @media screen and (min-width: 769px) {
+        width: 36vw;
+    }
 }
 
 .bg-right {
-    left: 20%;
+    /* Weird way of overflowing the body margin
+     * and be fullwidth */
+    right: calc(var(--body-side-padding) * -1);
+
+    @media screen and (min-width: 769px) {
+    /* This is necessary because the image that the pseudo
+     * element is attached to overflows on large screens,
+     * making the blue background disappear */
+     left: 14vw;
+    }
+
 }
 
 .bg-left {
-    right: 20%;
+    left: calc(var(--body-side-padding) * -1);
+    border-radius: 0 110px 110px 0;
 }

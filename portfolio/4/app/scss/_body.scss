@@ -148,9 +148,12 @@ nav.features {
 
     figure {
         margin-bottom: 5em;
-        max-width: 380px;
         margin: auto;
         margin-bottom: 5em;
+
+        img {
+            max-width: 380px;
+        }
 
         @media screen and (min-width: 769px) {
             flex: 1;
