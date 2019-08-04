@@ -2201,7 +2201,14 @@ input, select, textarea {
 		 }
 
 		p {
-			margin-bottom: 1em;
+			margin-bottom: .8em;
+		}
+
+		#main > .panel.intro header p.contact {
+			font-size: 1.1rem;
+			margin-top: 1em;
+			line-height: 1.2em;
+
 		}
 
 		h3 {
